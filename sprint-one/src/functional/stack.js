@@ -15,12 +15,12 @@ var Stack = function() {
   };
 
   someInstance.pop = function() {
-    // save top element in var to return later
-    var newestElement = storage[count - 1];
-    // delete top element from storage bin
-    delete storage[count - 1];
     // decrement count var
     count--;
+    // save top element in var to return later
+    var newestElement = storage[count];
+    // delete top element from storage bin
+    delete storage[count];
     // return deleted value
     return newestElement;
   };
